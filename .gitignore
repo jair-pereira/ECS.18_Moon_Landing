@@ -1,3 +1,6 @@
 /DB
 .DS_Store
 *.dat
+*.pyc
+*.exe
+*.exe
