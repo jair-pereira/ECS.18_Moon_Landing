@@ -83,7 +83,7 @@ def frk02():
 
 def frk03():
     utils.ALG = "FRK03"
-    utils.IRACE = True
+    utils.IRACE = False
     utils.modifier = 2.00
     n = 100
     iteration = 150
