@@ -1,0 +1,46 @@
+Generation:
+30
+
+Phenotype:
+import numpy as np
+import src
+import utils
+utils.IRACE = True
+utils.modifier = 0.00
+n = 100
+iteration = 9
+my_func = utils.evaluate
+dimension = 2
+bounds = 0, 1
+beta = 0.00
+pr = 0.50
+w = 2.00
+c1 = 0.50
+c2 = 2.00
+pa = 0.75
+dp = 0.75
+def ge():
+  X = np.array([src.solution(my_func, dimension, bounds) for i in range(n)])
+  [Xi.initRandom() for Xi in X]
+  f = my_func([Xi.x for Xi in X])
+  [X[i].setFitness(f[i]) for i in range(n)]
+  for it in range(iteration):
+    U = src.op.op_pso(X, src.op.select_random, src.op.mut_pso, src.op.crx_exponential)
+    f = my_func([Ui.x for Ui in U])
+    [U[i].setFitness(f[i]) for i in range(n)]
+    X = U
+    U = src.op.op_de(X, src.op.select_random, src.op.mut_pso, src.op.crx_exponential)
+    f = my_func([Ui.x for Ui in U])
+    [U[i].setFitness(f[i]) for i in range(n)]
+    X = src.op.replace_if_best(X, U)
+  return X
+ge()
+XXX_output_XXX = src.solution.best.getFitness()
+
+Genotype:
+[903, 496, 780, 675, 655, 307, 815, 8, 371, 158, 348, 856, 837, 282, 755, 505, 50, 523, 340, 738, 855, 901, 421, 708, 693, 972, 988, 751, 352, 607, 502, 495, 136, 322, 321, 980, 20, 466, 338, 423, 652, 221, 941, 947, 225, 102, 854, 113]
+Tree:
+(<S> (<init> import numpy as np{::}import src{::}import utils{::} (<params> utils.IRACE = True{::}utils.modifier =  (<mod> 0.00) {::}n = 100{::}iteration = 9{::}my_func = utils.evaluate{::}dimension = 2{::}bounds = 0, 1{::}beta =  (<beta> 0.00) {::}pr =  (<pr> 0.50) {::}w =  (<w> 2.00) {::}c1 =  (<c1> 0.50) {::}c2 =  (<c2> 2.00) {::}pa =  (<pr> 0.75) {::}dp =  (<pr> 0.75) {::}) {::}def ge():{:X = np.array([src.solution(my_func, dimension, bounds) for i in range(n)]){::}[Xi.initRandom() for Xi in X]{::}f = my_func([Xi.x for Xi in X]){::}[X[i].setFitness(f[i]) for i in range(n)]{::}for it in range(iteration):{: (<main> (<ModificationRound> (<step> U =  (<operator> (<pso> src.op.op_pso)) (X,  (<sel> (<random> src.op.select_random)) ,  (<mut> src.op.mut_pso) ,  (<cross> src.op.crx_exponential) ){::}f = my_func([Ui.x for Ui in U]){::}[U[i].setFitness(f[i]) for i in range(n)]{::}X =  (<output> (<choose_all> U))) {::} (<step> U =  (<operator> (<de> src.op.op_de)) (X,  (<sel> (<random> src.op.select_random)) ,  (<mut> src.op.mut_pso) ,  (<cross> src.op.crx_exponential) ){::}f = my_func([Ui.x for Ui in U]){::}[U[i].setFitness(f[i]) for i in range(n)]{::}X =  (<output> (<replace_if_better> src.op.replace_if_best(X, U)))))) :}{::}return X:}) {::} (<call> ge(){::}XXX_output_XXX = src.solution.best.getFitness()))
+
+Fitness:
+-0.98000002
