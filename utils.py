@@ -35,7 +35,7 @@ def evaluate(x):
     np.savetxt("pop_vars_eval.txt", x, delimiter='	', newline='\n')
     
     #evaluate X
-    subprocess.call(r"moon_sop.exe ./")
+    subprocess.call(["./moon_sop", "./"])
     
     #load the result of the evaluation
     objs = np.loadtxt("pop_objs_eval.txt") #maximization of objs
