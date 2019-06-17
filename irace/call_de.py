@@ -2,7 +2,7 @@ import numpy as np
 import sys, argparse, os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from solvers import de
-import util
+import utils
 
 ### interface between the target-runner and the solvers for irace ###
 
@@ -18,7 +18,7 @@ def main(args):
     utils.IRACE = True
     utils.ALG = "DE"
     utils.modifier = args.mod
-    sol = de(args.n, utils.evaluate, (0, 1), 2, 1.2e+3, args.beta, args.pr)
+    sol = de(int(args.n), utils.evaluate, (0, 1), 2, 1.2e+3, args.beta, args.pr)
     
     print(sol.best.getFitness())
     return 

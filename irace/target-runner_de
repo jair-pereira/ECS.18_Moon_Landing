@@ -1,0 +1,2 @@
+#!/bin/bash
+python call_de.py --n $5 --beta $6 --pr $7 --mod $8

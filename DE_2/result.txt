@@ -1,0 +1,28 @@
+result:
+          Communication Time = -0.7240598800 in 0000 th run
+          Communication Time = -0.6398556800 in 0001 th run
+          Communication Time = -0.7422443000 in 0002 th run
+          Communication Time = -0.7775232800 in 0003 th run
+          Communication Time = -0.7222752600 in 0004 th run
+          Communication Time = -0.6418581000 in 0005 th run
+          Communication Time = -0.7031961700 in 0006 th run
+          Communication Time = -0.6400405200 in 0007 th run
+          Communication Time = -0.8013503000 in 0008 th run
+          Communication Time = -0.6859348400 in 0009 th run
+          Communication Time = -0.6579954000 in 0010 th run
+          Communication Time = -0.6300000000 in 0011 th run
+          Communication Time = -0.6433333200 in 0012 th run
+          Communication Time = -0.6266666700 in 0013 th run
+          Communication Time = -0.6701709000 in 0014 th run
+          Communication Time = -0.6801714300 in 0015 th run
+          Communication Time = -0.6852746000 in 0016 th run
+          Communication Time = -0.6258493700 in 0017 th run
+          Communication Time = -0.6787040800 in 0018 th run
+          Communication Time = -0.6266666700 in 0019 th run
+          Communication Time = -0.7346704000 in 0020 th run
+
+   Median Communication Time = -0.6787040800 in 0018 th run
+   Best   Communication Time = -0.8013503000 in 0008 th run
+   Worst  Communication Time = -0.6258493700 in 0017 th run
+   Mean   Communication Time = -0.6827543414             
+   Stdev  Communication Time = 0.0514691320             
